@@ -12,8 +12,10 @@ def generate_api_key_raw() -> str:
     return f"{API_KEY_PREFIX}{token}"
 
 
-def api_key_prefix_display(full_key: str, length: int = 8) -> str:
-    return full_key[:length] if len(full_key) >= length else full_key
+def api_key_lookup_prefix(full_key: str, length: int = 8) -> str:
+    """Return a short prefix from the secret portion (after rgs_) for indexed lookup."""
+    body = full_key[len(API_KEY_PREFIX) :] if full_key.startswith(API_KEY_PREFIX) else full_key
+    return body[:length] if len(body) >= length else body
 
 
 def hash_api_key(raw_key: str) -> str:
