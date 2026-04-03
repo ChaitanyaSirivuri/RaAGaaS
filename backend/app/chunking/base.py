@@ -1,13 +1,10 @@
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
-from typing import Literal
-
-ChunkStrategyName = Literal["fixed", "recursive", "semantic"]
 
 
 @dataclass
 class ChunkConfig:
-    strategy: ChunkStrategyName
+    strategy: str
     size: int
     overlap: int
 
