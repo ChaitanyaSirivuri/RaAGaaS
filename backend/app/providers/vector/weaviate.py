@@ -66,6 +66,7 @@ class WeaviateProvider(VectorProvider):
                 Property(name="doc_id", data_type=DataType.TEXT),
                 Property(name="chunk_index", data_type=DataType.INT),
                 Property(name="filename", data_type=DataType.TEXT),
+                Property(name="meta", data_type=DataType.TEXT),
             ],
         )
 
@@ -94,7 +95,7 @@ class WeaviateProvider(VectorProvider):
         response = await coll.query.near_vector(
             near_vector=query_vec,
             limit=top_k,
-            return_properties=["text", "doc_id", "chunk_index", "filename"],
+            return_properties=["text", "doc_id", "chunk_index", "filename", "meta"],
             return_metadata=MetadataQuery(distance=True),
         )
         results: list[SearchResult] = []

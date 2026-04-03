@@ -87,6 +87,7 @@ async def ingest_document_bytes(
                             "doc_id": str(document.id),
                             "chunk_index": ch.index,
                             "filename": document.filename,
+                            "meta": "",
                         },
                     ),
                 )
