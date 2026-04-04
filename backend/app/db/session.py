@@ -16,7 +16,7 @@ def _ensure_engine() -> None:
         _session_factory = async_sessionmaker(_engine, expire_on_commit=False)
 
 
-async def get_db_session() -> AsyncGenerator[AsyncSession, None]:
+async def get_db() -> AsyncGenerator[AsyncSession, None]:
     _ensure_engine()
     assert _session_factory is not None
     async with _session_factory() as session:
