@@ -9,8 +9,8 @@
   <a href="https://www.python.org/">
     <img alt="Made with Python" src="https://img.shields.io/badge/Made%20with-Python-1f425f.svg?color=purple">
   </a>
-  <a href="https://github.com/chaitanyasirivuri/raagaas/blob/main/LICENSE">
-    <img alt="MIT License" src="https://img.shields.io/github/license/chaitanyasirivuri/raagaas.svg?color=green">
+  <a href="https://github.com/ChaitanyaSirivuri/RaAGaaS/blob/main/LICENSE">
+    <img alt="MIT License" src="https://img.shields.io/github/license/ChaitanyaSirivuri/RaAGaaS.svg?color=green">
   </a>
 </p>
 
